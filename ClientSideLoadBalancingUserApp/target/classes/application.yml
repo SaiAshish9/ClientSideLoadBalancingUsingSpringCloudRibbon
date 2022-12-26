@@ -1,0 +1,14 @@
+server:
+  port: 9090
+
+ribbon:
+  eureka:
+    enabled: false
+  eager-load:
+    enabled: false
+    clients: chatbook
+
+chatbook:
+  ribbon:
+    listOfServers : localhost:8081,localhost:8082,localhost:8083
+    ServerListRefreshInterval : 2000
